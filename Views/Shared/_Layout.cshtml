@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PracticeMVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css"/>
+</head>
+<body>
+    <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li id="name" class="nav-item">
+                                <a class="nav-link text-dark">RDOS </a>
+                            </li>
+                            <li class="iconmenu nav-item">
+                                <a class="nav-link text-dark"><i class=" fas fa-bars"></i></a>
+                            </li>
+                            <li class="nav-item">
+
+                            </li>
+                            <li id="english" class="nav-item">
+                                <a class="nav-link text-dark">English(Word) <i class="iconclose fas fa-times"></i> <i class=" droplist fas fa-caret-down"></i></a>
+                                <a class="login"> Login</a>
+                                <a> <i class="fas fa-comments"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="main">
+            <div class="menu">
+                <div class="icon"> Navigation </div>
+                <div class="navigiton">
+                    <ul class="ulli">
+                        <li class="drop">
+                            Customer Manegemnet <i class="fas fa-caret-down"></i>
+                            <ul class="drop">
+                                <li><a asp-area="" asp-controller="CustomerSetting" asp-action="Index">Customer Setting</a> </li>
+                                <li><a asp-area="" asp-controller="CustomerAttribute" asp-action="Index">Customer Attribute</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="footercontainer">
+                <span class="footertext">
+                    CopyRight &copy; 2021  ONE SOLUTION
+                </span>
+            </div>
+        </div>
+        @*<div class="sidenav">
+                <div class="icon"> Navigation </div>
+                <div>
+                        <button class="dropdown-btn">Base Price
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-container">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                      </div>
+                </div>
+               
+                <div>
+                    <button class="dropdown-btn">Price Setting
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+                </div>
+
+              <div>
+                  <button class="dropdown-btn">Price List Type
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              </div>
+
+              <div>
+                  <button class="dropdown-btn">Distributor 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              </div>
+
+              <div>
+                  <button class="dropdown-btn">Inquiry 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              </div>
+
+              <div>
+                  <button class="dropdown-btn">Customer Management 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a class="nav-link text-dark" asp-area="" asp-controller="CustomerSetting" asp-action="Index">Customer Setting</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="CustomerAttribute" asp-action="Index">Customer Attribute</a>
+                <a class="nav-link text-dark" >Customer Hierarchy Structure</a>
+                <a class="nav-link text-dark" >Customer Hierarchy Mapping</a>
+                <a class="nav-link text-dark" >Customer Hierarchy Inquiry</a>
+                <a class="nav-link text-dark" >Customer Maintenance</a>
+                <a class="nav-link text-dark" >Shipto Management</a>
+                <a class="nav-link text-dark" >Adjustment</a>
+                <a class="nav-link text-dark" >Adjustment Approval</a>
+              </div>
+              </div>
+
+              
+
+        <div class="footercontainer">
+           <span class="text"> COPYRIGHT &copy; 2021 . ONE SOLUTION</span>  
+         </div>
+
+        </div>*@
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+    </script>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

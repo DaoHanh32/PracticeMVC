@@ -206,7 +206,7 @@ header .menu li {
 .listAttribute {
     position: absolute;
     top: 50px;
-    left: 20px;
+    left: 0px;
     right: 0;
     box-sizing: border-box;
     background-color: #e5e5e5;

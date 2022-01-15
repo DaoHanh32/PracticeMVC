@@ -127,10 +127,10 @@ namespace PracticeMVC.Controllers
                 {
                     file.CopyTo(stream);
                     stream.Position = 0;
-                    if (sFileExtension == ".xls")
+                    if (sFileExtension == ".xlsx")
                     {
-                        HSSFWorkbook hssfwb = new HSSFWorkbook(stream); //This will read the Excel 97-2000 formats  
-                        sheet = hssfwb.GetSheetAt(0); //get first sheet from workbook  
+                        XSSFWorkbook xssfwb = new XSSFWorkbook(stream); //This will read the Excel 97-2000 formats  
+                        sheet = xssfwb.GetSheetAt(0); //get first sheet from workbook  
                     }
                     else
                     {
@@ -165,6 +165,8 @@ namespace PracticeMVC.Controllers
             }
             return this.Content(sb.ToString());
         }
+
+
 
     }
 }

@@ -17,7 +17,8 @@
         <div class="itemlistsetting">
             <div class="row">
     <div class="listAttribute">
-        <form asp-action="Create">
+        <div style="margin-left: 40px; margin-right: 10px">
+            <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Attribute_Id" class="control-label"></label>
@@ -63,6 +64,8 @@
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
+        </div>
+        
     </div>
 </div>
         </div>

@@ -443,3 +443,6 @@ D:\Training\PracticeMVC\bin\Debug\net5.0\NPOI.OpenXml4Net.dll
 D:\Training\PracticeMVC\bin\Debug\net5.0\NPOI.OpenXmlFormats.dll
 D:\Training\PracticeMVC\bin\Debug\net5.0\NPOI.dll
 D:\Training\PracticeMVC\bin\Debug\net5.0\ICSharpCode.SharpZipLib.dll
+D:\Training\PracticeMVC\bin\Debug\net5.0\EPPlus.dll
+D:\Training\PracticeMVC\bin\Debug\net5.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Training\PracticeMVC\bin\Debug\net5.0\System.Xml.XPath.XmlDocument.dll
